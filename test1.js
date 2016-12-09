@@ -12,13 +12,14 @@ function json_download() {
                 record+="<div class='col-md-8'><b> Body:   </b>" + data[i].body + "</div>";
                 $("#new").append("<li>"+record+"</li>");
                 $("#new").append("<p> <button class='btn btn-info' type='button'>Lubię to</button></p><br></br>");
-                $("#new").append("</div></div>");
-
+                $("#new").append("</div>");
+                record="";
                 /*$("#new").append("<div class='row'>")
                 $("#new").append("<div class='col-md-4'><p id='Ramka'><li><b> Title: " + "</b>"+ data[i].title + "</li>");
                 $("#new").append("<div class='col-md-8'><li><b> Body: " + "</b>" + data[i].body + "</li></p></div>");
                 $("#new").append("<p> <button class='btn btn-info' type='button'>Lubię to</button></p><br></br>");
                 $("#new").append("</div></div>")*/
             }
+
         });
 };
