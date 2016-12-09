@@ -2,10 +2,23 @@
  * Created by mrowinski on 05.12.2016.
  */
 var data=[];
-$.getJSON('http://jsonplaceholder.typicode.com/posts',function(data){
-    for(var i=0;i<data.length;i++)
-    {
-        $("#new").append("<li> Title: "+data[i].title+"</li>");
-        $("#new").append("<li> Body: "+data[i].body+"</li><br></br>");
-    }
-});
+function json_download() {
+
+        $.getJSON('http://jsonplaceholder.typicode.com/posts', function (data) {
+            var record = "";
+            for (var i = 0; i < data.length; i++) {
+                record+="<div class='row'>";
+                record+="<div class='col-md-4'><b> Title:   </b>" + data[i].title+"</div>";
+                record+="<div class='col-md-8'><b> Body:   </b>" + data[i].body + "</div>";
+                $("#new").append("<li>"+record+"</li>");
+                $("#new").append("<p> <button class='btn btn-info' type='button'>Lubię to</button></p><br></br>");
+                $("#new").append("</div></div>");
+
+                /*$("#new").append("<div class='row'>")
+                $("#new").append("<div class='col-md-4'><p id='Ramka'><li><b> Title: " + "</b>"+ data[i].title + "</li>");
+                $("#new").append("<div class='col-md-8'><li><b> Body: " + "</b>" + data[i].body + "</li></p></div>");
+                $("#new").append("<p> <button class='btn btn-info' type='button'>Lubię to</button></p><br></br>");
+                $("#new").append("</div></div>")*/
+            }
+        });
+};
