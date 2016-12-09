@@ -23,4 +23,3 @@ $(document).ready(function(){
         json_download();
     });
 });
-    //Some code
