@@ -19,7 +19,5 @@ function json_download() {
 };
 
 $(document).ready(function(){
-    $("#button").click(function(){
-        json_download();
-    });
+    $("#button").click(json_download);
 });
